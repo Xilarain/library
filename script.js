@@ -7,28 +7,28 @@ const myLibrary = [
     readStatus: "yes"
   },
   {
-    title: 'How to Code',
+    title: 'Hi Stranger :D',
     author: 'Lixarain',
     pages: 123,
     id: '320750a5-7979-44b0-aa37-c843deea027e',
     readStatus: "yes"
   },
   {
-    title: 'How to Code',
+    title: 'Thanks for visiting!',
     author: 'Lixarain',
     pages: 123,
     id: '320750a5-7979-44b0-aa37-c843deea027e',
     readStatus: "yes"
   },
   {
-    title: 'How to Code',
+    title: 'Good luck coding!',
     author: 'Lixarain',
     pages: 123,
     id: '320750a5-7979-44b0-aa37-c843deea027e',
     readStatus: "yes"
   },
    {
-    title: 'How to PEWGF',
+    title: 'I believe in you!',
     author: 'Lixarain',
     pages: 123,
     id: '320750a5-7979-44b0-aa37-c843deea027e',
@@ -140,7 +140,6 @@ close.addEventListener('click', () =>{
 const bookSubmit = document.getElementById("book-submit");
 bookSubmit.addEventListener("click", function(event){
   event.preventDefault();
-  console.log('THE BUTTON WORKS');
   const title = document.getElementById("title").value;
   const author = document.getElementById("author").value;
   const pages = document.getElementById("pages").value;

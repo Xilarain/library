@@ -117,3 +117,36 @@ myLibrary.forEach(book => {
 }
 
 displayBooks();
+
+const dialog = document.getElementById("my-dialog");
+const close = document.getElementById("close");
+
+dialog.addEventListener('click', (e) => {
+  const dialogDimensions = dialog.getBoundingClientRect();
+  if (
+    e.clientX < dialogDimensions.left ||
+    e.clientX > dialogDimensions.right ||
+    e.clientY < dialogDimensions.top ||
+    e.clientY > dialogDimensions.bottom
+  ) {
+    dialog.close();
+  }
+});
+
+close.addEventListener('click', () =>{
+  dialog.close();
+})
+
+const bookSubmit = document.getElementById("book-submit");
+bookSubmit.addEventListener("click", function(event){
+  event.preventDefault();
+  console.log('THE BUTTON WORKS');
+  const title = document.getElementById("title").value;
+  const author = document.getElementById("author").value;
+  const pages = document.getElementById("pages").value;
+  const read = document.getElementById("read").value;
+  addBookToLibrary(author, title, pages, read);
+  dialog.close();
+  document.getElementById("form").reset();
+});
+

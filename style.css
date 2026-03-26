@@ -31,7 +31,7 @@
     margin: 1.5rem 0;
 }
 
-.btn-container button{
+.btn-container > button{
     padding: 2rem;
     border-radius: 1rem;
     background-color: rgb(0, 238, 255);
@@ -63,12 +63,9 @@
 }
 
 dialog {
-  /* Resets default browser offsets */
   padding: 0;
   border: none;
   border-radius: 8px;
-  
-  /* Centering Logic */
   margin: auto; 
 }
 
@@ -78,8 +75,40 @@ dialog[open] {
   align-items: center;
 }
 
-/* Optional: Styling the backdrop */
 dialog::backdrop {
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(2px);
+}
+
+.form-layout{
+    display:flex;
+    flex-direction: column;
+    gap:1rem;
+    padding: 5rem;
+}
+
+.input-label{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-layout > .close-container{
+    margin-left: auto;
+}
+
+label{
+    font-size: 1.5rem;
+}
+
+.close{
+    padding: 0.5rem 0.5rem;
+}
+
+.input-label > input{
+    padding: 0.3rem;
+}
+
+.form-submit>button{
+    padding: 1rem;
+    font-size: 1rem;
 }

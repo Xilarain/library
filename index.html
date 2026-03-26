@@ -14,10 +14,32 @@
         </div>
         <div class="content-container">
             <div class="btn-container">
-            <button command="show-modal" commandfor="my-dialog">ADD BOOK</button>
+            <button class="blue-btn" command="show-modal" commandfor="my-dialog">ADD BOOK</button>
             <dialog id="my-dialog">
-                <p>This dialog was opened using an invoker command.</p>
-                <button commandfor="my-dialog" command="close">Close</button>
+                <div class="form-container">
+                    <form action="#" id="form">
+                        <div class="form-layout">
+                            <div class="close-container"><button class="close" id="close">x</button></div>
+                            <div class="input-label">
+                                <label for="title">Title:</label>
+                                <input type="text" id="title" name="title" required>
+                            </div>
+                            <div class="input-label">
+                                <label for="author">Author:</label>
+                                <input type="text" id="author" name="author" required>
+                            </div>
+                            <div class="input-label">
+                                <label for="pages">Pages:</label>
+                                <input type="number" id="pages" name="pages" required>
+                            </div>
+                            <div class="input-label">
+                                <label for="read">Read:</label>
+                                <input type="text" id="read" name="read" required>
+                            </div>
+                            <div class="form-submit"><button type="submit" id="book-submit">Add Book</button></div>
+                        </div>
+                    </form>
+                </div>
             </dialog>
             </div>
             <div class="card-grid" id="card-grid">
